@@ -2,8 +2,9 @@ const {
   getFirstItemFrom,
   getLastItemFrom,
   getIndex3,
-  firstItemIsNumber,
   isLongList,
+  firstItemIsNumber,
+  secondCharOfThirdString,
 } = require('./main.js')
 
 
@@ -35,6 +36,22 @@ describe('getIndex3', () => {
   })
 });
 
+
+describe('isLongList', () => {
+  it('returns true if the array holds more than 10 items', () => {
+    expect(isLongList([10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0])).toBe(true)
+    expect(isLongList(['the', 'vowels', 'are', 'a', 'e', 'i', 'o', 'u', 'and', 'sometimes', 'y'])).toBe(true);
+  })
+  
+  it('returns true if the array holds exactly 10 items', () => {
+    expect(isLongList([10, 9, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(true)
+    expect(isLongList([10, 9, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(true)
+  })
+  
+  it('returns false if the array holds fewer than 10 items', () => {
+    expect(isLongList([10, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(false)
+  })
+})
 
 describe('firstItemIsNumber', () => {
   it('returns true if the first item is a number', () => {
@@ -68,19 +85,9 @@ describe('firstItemIsNumber', () => {
   })
 })
 
-
-describe('isLongList', () => {
-  it('returns true if the array holds more than 10 items', () => {
-    expect(isLongList([10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0])).toBe(true)
-    expect(isLongList(['the', 'vowels', 'are', 'a', 'e', 'i', 'o', 'u', 'and', 'sometimes', 'y'])).toBe(true);
-  })
-  
-  it('returns true if the array holds exactly 10 items', () => {
-    expect(isLongList([10, 9, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(true)
-    expect(isLongList([10, 9, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(true)
-  })
-  
-  it('returns false if the array holds fewer than 10 items', () => {
-    expect(isLongList([10, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(false)
+describe('secondCharOfThirdString', () => {
+  it(`returns the second character of the third string in the given array`, () => {
+    expect(secondCharOfThirdString(['hello', 'there', 'good', 'sir'])).toBe('o');
+    expect(secondCharOfThirdString(['yes', 'we', 'have', 'no', 'bananas'])).toBe('a');
   })
 })

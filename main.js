@@ -7,6 +7,7 @@
 
 
 
+
  /********************************************
  * CODE DOWN HERE IS FOR INTERNAL USE ONLY. *
  *           PLEASE DON'T TOUCH!            *
@@ -40,6 +41,10 @@ if (typeof isLongList === 'undefined') {
 }
 
 
+if (typeof secondCharOfThirdString === 'undefined') {
+  secondCharOfThirdString = undefined;
+}
+
 
 
 
@@ -49,4 +54,5 @@ module.exports = {
   getIndex3,
   firstItemIsNumber,
   isLongList,
+  secondCharOfThirdString,
 }

@@ -1,6 +1,6 @@
 # You Deserve Arrays
 
-### Introdunction
+### Introduction
 
 This is an exercise for retrieving data from an array. Arrays are awesome and you will soon love them. It's our honor to play matchmaker in this regard!
 
@@ -18,6 +18,9 @@ This is a test-based challenge, similar to many we've done before, but here's th
 
 ### Challenges
 
+**See `main.test.js` (or your `npm test` terminal) for full examples of expected output given certain inputs.**
+
+
 1. `getFirstItemFrom`: takes in an array as a parameter and returns the first item from that array.
 
 2. `getLastItemFrom`: takes in an array as a parameter and returns the last item from that array.
@@ -28,3 +31,4 @@ This is a test-based challenge, similar to many we've done before, but here's th
 
 5. `firstItemIsNumber`: takes in an array as a parameter and returns a boolean indicating whether or not the first item in the array is a number.
 
+6. `secondCharOThirdString`: takes in an array as a parameter and returns the second character in the third item in the array. We'll assume that that third item is a string for now, but a good function would check that's true!
