@@ -14,6 +14,7 @@ describe('getFirstItemFrom', () => {
   })
 })
 
+
 describe('getLastItemFrom', () => {
   it('returns the last item in an array', () => {
     expect(getLastItemFrom([1, 1, 2, 3, 5, 8])).toBe(8);
@@ -21,17 +22,19 @@ describe('getLastItemFrom', () => {
   })
 })
 
+
 describe('getIndex3', () => {
   it('returns index 3 of an array with at least 4 items', () => {
     expect(getIndex3(['hello', 'darkness', 'my', 'old', 'friend'])).toBe('old')
-    expect(getIndex3(['jesse', 'busra', 'jesse', 'sung', 'john'])).toBe('sung')
+    expect(getIndex3(['tyrell', 'jumary', 'tyrell', 'wilson', 'carlos'])).toBe('wilson')
   })
   
   it('returns the last index of an array with fewer than 4 items', () => {
     expect(getIndex3([1, 1, 2])).toBe(2)
-    expect(getIndex3([3])).toBe(3)
+    expect(getIndex3([4])).toBe(4)
   })
 });
+
 
 describe('firstItemIsNumber', () => {
   it('returns true if the first item is a number', () => {
@@ -39,13 +42,13 @@ describe('firstItemIsNumber', () => {
     expect(firstItemIsNumber([0])).toBe(true);
   })
 
-  it(`returns false if the first item is a string, even if its value is 'number'`, () => {
-    expect(firstItemIsNumber(['number'])).toBe(false);
-  })
-
   it('returns false if the first item is a string', () => {
     expect(firstItemIsNumber(['1'])).toBe(false);
     expect(firstItemIsNumber(['i am not a number.', 'I am a free man.'])).toBe(false);
+  })
+
+  it(`returns false if the first item is a string, even if its value is 'number'`, () => {
+    expect(firstItemIsNumber(['not a number'])).toBe(false);
   })
 
   it('returns false if the first item is a boolean', () => {
@@ -64,12 +67,15 @@ describe('firstItemIsNumber', () => {
   })
 })
 
+
 describe('isLongList', () => {
   it('returns true if the array holds more than 10 items', () => {
     expect(isLongList([10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0])).toBe(true)
+    expect(isLongList(['the', 'vowels', 'are', 'a', 'e', 'i', 'o', 'u', 'and', 'sometimes', 'y'])).toBe(true);
   })
   
   it('returns true if the array holds exactly 10 items', () => {
+    expect(isLongList([10, 9, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(true)
     expect(isLongList([10, 9, 8, 7, 6, 4, 3, 2, 1, 0])).toBe(true)
   })
   
