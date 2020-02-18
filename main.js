@@ -25,8 +25,8 @@ if (typeof getLastItemFrom === 'undefined') {
 
 
 
-if (typeof getIndex2 === 'undefined') {
-  getIndex2 = undefined;
+if (typeof getIndex3 === 'undefined') {
+  getIndex3 = undefined;
 }
 
 
