@@ -1,22 +1,45 @@
-function getFirstItemFrom() {
+/******************
+ * YOUR CODE HERE *
+ ******************/
 
+
+
+
+
+
+ /********************************************
+ * CODE DOWN HERE IS FOR INTERNAL USE ONLY. *
+ *           PLEASE DON'T TOUCH!            *
+ ********************************************/
+
+
+
+if (typeof getFirstItemFrom === 'undefined') {
+  getFirstItemFrom = undefined;
 }
 
-function getLastItemFrom() {
 
+if (typeof getLastItemFrom === 'undefined') {
+  getLastItemFrom = undefined;
 }
 
-function getIndex3() {
 
+
+if (typeof getIndex2 === 'undefined') {
+  getIndex2 = undefined;
 }
 
-function firstItemIsNumber() {
 
+if (typeof firstItemIsNumber === 'undefined') {
+  firstItemIsNumber = undefined;
 }
 
-function isLongList() {
 
+if (typeof isLongList === 'undefined') {
+  isLongList = undefined;
 }
+
+
 
 
 
