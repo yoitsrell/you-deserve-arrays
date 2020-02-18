@@ -58,6 +58,7 @@ describe('firstItemIsNumber', () => {
 
   it('returns false if the first item is an array', () => {
     expect(firstItemIsNumber([[]])).toBe(false);
+    
     expect(firstItemIsNumber([['inception'], [`wasn't`], [`actually`], [`that`], [`good`]])).toBe(false);
   })
 
