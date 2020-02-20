@@ -28,7 +28,7 @@ function isLongList(array){
 }
 
 function firstItemIsNumber(array){
-  
+  return typeof array[0] === 'number'
 }
 
 function secondCharOfThirdString(array){
